@@ -1,0 +1,331 @@
+import {
+  benefitIcon1,
+  benefitIcon2,
+  benefitIcon3,
+  benefitIcon4,
+  benefitImage2,
+  chromecast,
+  disc02,
+  discord,
+  discordBlack,
+  facebook,
+  figma,
+  file02,
+  framer,
+  homeSmile,
+  instagram,
+  notification2,
+  notification3,
+  notification4,
+  notion,
+  photoshop,
+  plusSquare,
+  protopie,
+  raindrop,
+  recording01,
+  recording03,
+  roadmap1,
+  roadmap2,
+  roadmap3,
+  roadmap4,
+  searchMd,
+  slack,
+  sliders04,
+  telegram,
+  twitter,
+  yourlogo,
+} from "../assets";
+
+export const navigation = [
+  {
+    id: "0",
+    title: "Services",
+    url: "#features",
+  },
+ 
+  {
+    id: "2",
+    title: "Projects",
+    url: "#how-to-use",
+  },
+  {
+    id: "3",
+    title: "Our team",
+    url: "#roadmap",
+  },
+ 
+];
+
+export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
+
+export const notificationImages = [notification4, notification3, notification2];
+
+export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
+
+export const brainwaveServices = [
+  "Message Sentiments",
+  "Keyword Insight",
+  "Topic Modelling",
+];
+
+export const brainwaveServicesIcons = [
+  recording03,
+  recording01,
+  disc02,
+  chromecast,
+  sliders04,
+];
+
+export const roadmap = [
+  {
+    id: "0",
+    title: "Krutika Lodaya",
+    text: "Passionate about Web 3.0 Segmentation and Wallet Profiling. Founder, speaker and Investor.",
+    date: "May 2023",
+    status: "done",
+    imageUrl: roadmap1,
+    colorful: true,
+  },
+  {
+    id: "1",
+    title: "Jozef Jagan",
+    text: "Web3 enthusiast and strategist, contributing to 7 diverse projects with a focus on go-to-market strategy and tokenomics.",
+    date: "May 2023",
+    status: "progress",
+    imageUrl: roadmap2,
+    colorful: true,
+
+  },
+ 
+];
+
+export const collabText =
+  "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.";
+
+export const collabContent = [
+  {
+    id: "0",
+    title: "Expertise at the intersection of innovation and comprehension",
+  },
+  {
+    id: "1",
+    title: "Artisanal approach to sculpting unique identities for wallet addresses.    ",
+  },
+  {
+    id: "2",
+    title: "Personalizing personas with tags like “DEX Trader” and “Gaming NFT Whale.”    ",
+  },
+  {
+    id: "3",
+    title: "Empowering Web3 projects to find like-minded enthusiasts.",
+  },
+  {
+    id: "4",
+    title: "Every wallet becomes a beacon of identity and purpose.”    ",
+  },
+];
+
+export const collabApps = [
+  {
+    id: "0",
+    title: "Figma",
+    icon: figma,
+    width: 26,
+    height: 36,
+  },
+  {
+    id: "1",
+    title: "Notion",
+    icon: notion,
+    width: 34,
+    height: 36,
+  },
+  {
+    id: "2",
+    title: "Discord",
+    icon: discord,
+    width: 36,
+    height: 28,
+  },
+  {
+    id: "3",
+    title: "Slack",
+    icon: slack,
+    width: 34,
+    height: 35,
+  },
+  {
+    id: "4",
+    title: "Photoshop",
+    icon: photoshop,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "5",
+    title: "Protopie",
+    icon: protopie,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "6",
+    title: "Framer",
+    icon: framer,
+    width: 26,
+    height: 34,
+  },
+  {
+    id: "7",
+    title: "Raindrop",
+    icon: raindrop,
+    width: 38,
+    height: 32,
+  },
+];
+
+export const pricing = [
+  {
+    id: "0",
+    title: "Basic",
+    description: "AI chatbot, personalized recommendations",
+    price: "0",
+    features: [
+      "An AI chatbot that can understand your queries",
+      "Personalized recommendations based on your preferences",
+      "Ability to explore the app and its features without any cost",
+    ],
+  },
+  {
+    id: "1",
+    title: "Premium",
+    description: "Advanced AI chatbot, priority support, analytics dashboard",
+    price: "9.99",
+    features: [
+      "An advanced AI chatbot that can understand complex queries",
+      "An analytics dashboard to track your conversations",
+      "Priority support to solve issues quickly",
+    ],
+  },
+  {
+    id: "2",
+    title: "Enterprise",
+    description: "Custom AI chatbot, advanced analytics, dedicated account",
+    price: null,
+    features: [
+      "An AI chatbot that can understand your queries",
+      "Personalized recommendations based on your preferences",
+      "Ability to explore the app and its features without any cost",
+    ],
+  },
+];
+
+export const benefits = [
+  {
+    id: "0",
+    title: "Targeted Marketing To Wallet Address",
+    text: "Well, work doesnt end there, does it? Dive deeper into precision marketing with our wallet-targeted strategies. By focusing on specific wallet owners, we ensure your project reaches the most interested and relevant audience, maximizing engagement and response rates.",
+    backgroundUrl: "./src/assets/benefits/card-1.svg",
+    iconUrl: benefitIcon1,
+    imageUrl: benefitImage2,
+  },
+  {
+    id: "1",
+    title: "Airdrop Services",
+    text: "Airdrops are a powerful tool for building a community and rewarding loyal users. Our airdrop services are designed to maximize engagement and participation, ensuring your project's success.",
+    backgroundUrl: "./src/assets/benefits/card-2.svg",
+    iconUrl: benefitIcon2,
+    imageUrl: benefitImage2,
+    light: true,
+  },
+  {
+    id: "2",
+    title: "Wallet Enrichment",
+    text: "Unleash the power of on-chain analysis, crafting enhanced profiles and fostering better personas for comprehensive success.",
+    backgroundUrl: "./src/assets/benefits/card-3.svg",
+    iconUrl: benefitIcon3,
+    imageUrl: benefitImage2,
+  },
+  {
+    id: "3",
+    title: "Web3.0 SEO",
+    text: "Wallet Hunter’s Web3SEO services brings advancement to your brand awareness. Our team is responsible for creating the strong on-page and off-page seo for your brand and attracting your users from organic presence. We provide full support on both web3 distribution strategy and content implementation across platforms.",
+    backgroundUrl: "./src/assets/benefits/card-4.svg",
+    iconUrl: benefitIcon4,
+    imageUrl: benefitImage2,
+    light: true,
+  },
+  {
+    id: "4",
+    title: "Telegram & Discord Bots",
+    text: "Similar to our Telegram services, our Discord bots and automation solutions foster vibrant communities on another key platform, driving engagement and building loyal followings for your project.",
+    backgroundUrl: "./src/assets/benefits/card-5.svg",
+    iconUrl: benefitIcon1,
+    imageUrl: benefitImage2,
+  },
+  {
+    id: "5",
+    title: "Web3 Social Managment",
+    text: "Wallet Hunter’s Web3 Social Media services are designed to enhance your brand's online presence, influence, and character. From devising strategic plans to implementing them, our team will breathe life into your brand or product across social media platforms. We develop a dynamic social media strategy that sustains itself, ensuring continuous growth and engagement for your brand.",
+    backgroundUrl: "./src/assets/benefits/card-6.svg",
+    iconUrl: benefitIcon2,
+    imageUrl: benefitImage2,
+  },
+  {
+    id: "6",
+    title: "AMA Sessions",
+    text: "Connect directly with your audience through AMA (Ask Me Anything) sessions. As a valuable tool for building trust and transparency, AMAs are a cornerstone of our engagement strategy, giving your project a relatable and accessible voice.",
+    backgroundUrl: "./src/assets/benefits/card-1.svg",
+    iconUrl: benefitIcon2,
+    imageUrl: benefitImage2,
+  },
+  {
+    id: "7",
+    title: "Transition From Web 2.0 to 3.0",
+    text: "The shift from Web 2.0 to Web 3.0 is monumental. Our team guides you through this transition, ensuring your project leverages the full potential of decentralized technologies and methodologies.",
+    backgroundUrl: "./src/assets/benefits/card-4.svg",
+    iconUrl: benefitIcon2,
+    imageUrl: benefitImage2,
+  },
+  {
+    id: "8",
+    title: "Collabration & Partnership",
+    text: "Expand your network and capabilities through strategic quests and partnerships. We facilitate connections with other projects and platforms, opening doors to new opportunities and synergies.",
+    backgroundUrl: "./src/assets/benefits/card-3.svg",
+    iconUrl: benefitIcon2,
+    imageUrl: benefitImage2,
+  },
+];
+
+export const socials = [
+  {
+    id: "0",
+    title: "Discord",
+    iconUrl: discordBlack,
+    url: "#",
+  },
+  {
+    id: "1",
+    title: "Twitter",
+    iconUrl: twitter,
+    url: "#",
+  },
+  {
+    id: "2",
+    title: "Instagram",
+    iconUrl: instagram,
+    url: "#",
+  },
+  {
+    id: "3",
+    title: "Telegram",
+    iconUrl: telegram,
+    url: "#",
+  },
+  {
+    id: "4",
+    title: "Facebook",
+    iconUrl: facebook,
+    url: "#",
+  },
+];
