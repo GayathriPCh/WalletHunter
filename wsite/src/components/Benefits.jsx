@@ -13,12 +13,13 @@ const Benefits = () => {
           title="Seamlessly Providing High Quality Services In "
         />
 
-        <div className="flex flex-wrap gap-10 mb-10">
+        <div className="flex flex-wrap justify-between gap-10 mb-10">
           {benefits.map((item) => (
             <div
-              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
+              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] w-full md:w-auto"
               style={{
                 backgroundImage: `url(${item.backgroundUrl})`,
+                flex: "1 0 30%", // Set flex-basis to 30% to allow 3 cards per row
               }}
               key={item.id}
             >
