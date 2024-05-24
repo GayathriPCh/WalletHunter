@@ -300,21 +300,21 @@ export const benefits = [
 export const socials = [
   {
     id: "0",
-    title: "Discord",
+    title: "Linkedin",
     iconUrl: discordBlack,
-    url: "#",
+    url: "https://www.linkedin.com/company/wallet-hunter/",
   },
   {
     id: "1",
     title: "Twitter",
     iconUrl: twitter,
-    url: "#",
+    url: "https://x.com/wallet_hunter",
   },
   {
     id: "2",
-    title: "Instagram",
+    title: "Github",
     iconUrl: instagram,
-    url: "#",
+    url: "https://github.com/z6o/WalletHunter",
   },
   {
     id: "3",
