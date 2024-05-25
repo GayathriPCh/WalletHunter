@@ -27,7 +27,7 @@ const Collaboration = () => {
             ))}
           </ul>
 
-          </div>
+        </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
           <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
@@ -62,7 +62,7 @@ const Collaboration = () => {
                     }`}
                   >
                     <img
-                      className="m-auto"
+                      className={`m-auto ${app.id !== 'brainwave' ? 'rounded-full' : ''}`}
                       width={app.width}
                       height={app.height}
                       alt={app.title}
