@@ -1,129 +1,98 @@
+import React, { useState } from 'react';
 import Section from "./Section";
 import Heading from "./Heading";
-import { service1, service2, service3, check } from "../assets";
-import { brainwaveServices, brainwaveServicesIcons } from "../constants";
-import {
-  PhotoChatMessage,
-  Gradient,
-  VideoBar,
-  VideoChatMessage,
-} from "./design/Services";
-
-import Generating from "./Generating";
 
 const Services = () => {
+  const [hovered, setHovered] = useState(false);
+
   return (
     <Section id="how-to-use">
       <div className="container">
-        <Heading
-          title="What we're working on"
-          
-        />
-
-        <div className="relative">
-          <div className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
-            <div className="absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto">
-              <img
-                className="w-full h-full object-cover md:object-right"
-                width={800}
-                alt="Smartest AI"
-                height={730}
-                src={service1}
-              />
-            </div>
-
-            <div className="relative z-1 max-w-[17rem] ml-auto">
-              <h4 className="h4 mb-4">Telegram trend analyzer bot</h4>
-              <p className="body-2 mb-[3rem] text-n-3">
-              Explore Data Frontiers With Cutting-Edge Insights!
-              </p>
-              <ul className="body-2">
-                {brainwaveServices.map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start py-4 border-t border-n-6"
-                  >
-                    <img width={24} height={24} src={check} />
-                    <p className="ml-4">{item}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <Generating className="absolute left-4 right-4 bottom-4 border-n-1/10 border lg:left-1/2 lg-right-auto lg:bottom-8 lg:-translate-x-1/2" />
+        <Heading title="Our Products" />
+        <div className="card-wrapper">
+          <div
+            className={`product-card ${hovered ? 'hovered' : ''}`}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+          >
+            <p className="title">Telegram Trends Analyzer</p>
+            {hovered && (
+              <div className="visit-link">
+                <a href="https://telegramtrends.xyz" className="visit-btn">Visit Website</a>
+              </div>
+            )}
           </div>
-
-          <div className="relative z-1 grid gap-5 lg:grid-cols-2">
-            <div className="relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden">
-              <div className="absolute inset-0">
-                <img
-                  src={service2}
-                  className="h-full w-full object-cover"
-                  width={630}
-                  height={750}
-                  alt="robot"
-                />
-              </div>
-
-              <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
-                <h4 className="h4 mb-4">Message Sentiments</h4>
-                <p className="body-2 mb-[3rem] text-n-3">
-                Explore your messages’ moods with Telegram Sentiment Analysis.
-                </p>
-              </div>
-
-              <PhotoChatMessage />
-            </div>
-
-            <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
-              <div className="py-12 px-4 xl:px-8">
-                <h4 className="h4 mb-4">Keyword Insight</h4>
-                <p className="body-2 mb-[2rem] text-n-3">
-                Discover the most frequently used words in your group chat with a dynamic word cloud.
-                </p>
-
-                <ul className="flex items-center justify-between">
-                  {brainwaveServicesIcons.map((item, index) => (
-                    <li
-                      key={index}
-                      className={`rounded-2xl flex items-center justify-center ${
-                        index === 2
-                          ? "w-[3rem] h-[3rem] p-0.25 bg-conic-gradient md:w-[4.5rem] md:h-[4.5rem]"
-                          : "flex w-10 h-10 bg-n-6 md:w-15 md:h-15"
-                      }`}
-                    >
-                      <div
-                        className={
-                          index === 2
-                            ? "flex items-center justify-center w-full h-full bg-n-7 rounded-[1rem]"
-                            : ""
-                        }
-                      >
-                        <img src={item} width={24} height={24} alt={item} />
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="relative h-[20rem] bg-n-8 rounded-xl overflow-hidden md:h-[25rem]">
-                <img
-                  src={service3}
-                  className="w-full h-full object-cover"
-                  width={520}
-                  height={400}
-                  alt="Scary robot"
-                />
-
-                <VideoChatMessage />
-                <VideoBar />
-              </div>
-            </div>
-          </div>
-
-          <Gradient />
         </div>
       </div>
+      <style jsx>{`
+        .container {
+          text-align: center;
+        }
+
+        .card-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 20px;
+        }
+
+        .product-card {
+          position: relative;
+          width: 380px; /* Increased width */
+          height: 280px; /* Increased height */
+          border: none;
+          border-radius: 20px;
+          overflow: hidden;
+          cursor: pointer;
+          background: linear-gradient(120deg, #000000, #7E54C6);
+          box-shadow: inset calc(-1 * 380px) calc(-1 * 280px) 0 black, 
+                      inset 380px calc(-1 * 280px) 0 #7E54C6, 
+                      inset calc(-1 * 380px) 280px 0 #0000FF, 
+                      inset 380px 280px 0 #7E54C6, 
+                      0 0 20px rgba(0, 0, 0, 0.6); 
+          transition: box-shadow ease-in-out .6s, color ease-in-out .5s, background-color ease-in-out .6s;
+        }
+
+        .title {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 28px; /* Increased font size */
+          font-weight: bold;
+          text-align: center;
+          color: #fff;
+          transition: color ease-in-out .5s;
+        }
+
+        .visit-link {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .visit-btn {
+          padding: 12px 24px; /* Increased padding */
+          background: linear-gradient(120deg, #ADD8E6, #0000FF); /* Blue gradient */
+          color: #fff;
+          text-decoration: none;
+          border-radius: 25px; /* Rounded corners */
+        }
+
+        .product-card.hovered {
+          background: #000000; /* Change back to black */
+          box-shadow: inset 0 0 0 transparent, 
+                      inset 0 0 0 transparent, 
+                      inset 0 0 0 transparent, 
+                      inset 0 0 0 transparent, 
+                      0 0 20px rgba(0, 0, 0, 0.6); 
+        }
+
+        .product-card.hovered .title {
+          color: transparent;
+        }
+      `}</style>
     </Section>
   );
 };

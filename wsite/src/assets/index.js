@@ -8,7 +8,11 @@ import smallSphere from "./4-small.png";
 import grid from "./grid.png";
 import check2 from "./check-02.svg";
 import loading1 from "./loading-01.svg";
-import yourlogo from "./yourlogo.svg";
+import brand1 from "./ammocrypt.png";
+import brand2 from "./Q.png";
+import brand3 from "./metafield.png";
+import brand4 from "./oxppl.png";
+
 import homeSmile from "./home-smile.svg";
 import file02 from "./file-02.svg";
 import searchMd from "./search-md.svg";
@@ -67,7 +71,15 @@ import benefitIcon1 from "./benefits/icon-1.svg";
 import benefitIcon2 from "./benefits/icon-2.svg";
 import benefitIcon3 from "./benefits/icon-3.svg";
 import benefitIcon4 from "./benefits/icon-4.svg";
+import benefitImage1 from "./benefits/image-1.png";
 import benefitImage2 from "./benefits/image-2.png";
+import benefitImage3 from "./benefits/image-3.png";
+import benefitImage4 from "./benefits/image-4.png";
+import benefitImage5 from "./benefits/image-5.png";
+import benefitImage6 from "./benefits/image-6.png";
+import benefitImage7 from "./benefits/image-7.png";
+import benefitImage8 from "./benefits/image-8.png";
+import benefitImage9 from "./benefits/image-9.png";
 
 import discordBlack from "./socials/discord.svg";
 import facebook from "./socials/facebook.svg";
@@ -86,7 +98,10 @@ export {
   gradient,
   smallSphere,
   grid,
-  yourlogo,
+  brand1,
+  brand2, 
+  brand3,
+  brand4,
   homeSmile,
   file02,
   searchMd,
@@ -138,7 +153,16 @@ export {
   benefitIcon2,
   benefitIcon3,
   benefitIcon4,
+  benefitImage1,
   benefitImage2,
+  benefitImage3,
+  benefitImage4,
+  benefitImage5,
+  benefitImage6,
+  benefitImage7,
+  benefitImage8,
+  benefitImage9,
+
   discordBlack,
   facebook,
   instagram,

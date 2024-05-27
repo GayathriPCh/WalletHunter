@@ -3,7 +3,15 @@ import {
   benefitIcon2,
   benefitIcon3,
   benefitIcon4,
+  benefitImage1,
   benefitImage2,
+  benefitImage3,
+  benefitImage4,
+  benefitImage5,
+  benefitImage6,
+  benefitImage7,
+  benefitImage8,
+  benefitImage9,
   chromecast,
   disc02,
   discord,
@@ -33,10 +41,18 @@ import {
   sliders04,
   telegram,
   twitter,
-  yourlogo,
+  brand1,
+  brand2,
+  brand3,
+  brand4,
 } from "../assets";
 
 export const navigation = [
+  {
+    id: "4",
+    title: "About us",
+    url: "#4",
+  },
   {
     id: "0",
     title: "Services",
@@ -45,13 +61,18 @@ export const navigation = [
  
   {
     id: "2",
-    title: "Projects",
+    title: "Products",
     url: "#how-to-use",
   },
   {
     id: "3",
     title: "Our team",
-    url: "#roadmap",
+    url: "#team",
+  },
+  {
+    id: "5",
+    title: "Contact us",
+    url: "#contact",
   },
  
 ];
@@ -60,7 +81,7 @@ export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 export const notificationImages = [notification4, notification3, notification2];
 
-export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
+export const companyLogos = [brand1, brand2, brand3, brand4];
 
 export const brainwaveServices = [
   "Message Sentiments",
@@ -224,10 +245,10 @@ export const benefits = [
   {
     id: "0",
     title: "Targeted Marketing To Wallet Address",
-    text: "Well, work doesnt end there, does it? Dive deeper into precision marketing with our wallet-targeted strategies. By focusing on specific wallet owners, we ensure your project reaches the most interested and relevant audience, maximizing engagement and response rates.",
+    text: "Dive deeper into precision marketing with our wallet-targeted strategies. By focusing on specific wallet owners, we ensure your project reaches the most interested and relevant audience, maximizing engagement and response rates.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage1,
   },
   {
     id: "1",
@@ -244,7 +265,7 @@ export const benefits = [
     text: "Unleash the power of on-chain analysis, crafting enhanced profiles and fostering better personas for comprehensive success.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon3,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage3,
   },
   {
     id: "3",
@@ -252,7 +273,7 @@ export const benefits = [
     text: "Wallet Hunter’s Web3SEO services brings advancement to your brand awareness. Our team is responsible for creating the strong on-page and off-page seo for your brand and attracting your users from organic presence. We provide full support on both web3 distribution strategy and content implementation across platforms.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon4,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage4,
     light: true,
   },
   {
@@ -261,15 +282,15 @@ export const benefits = [
     text: "Similar to our Telegram services, our Discord bots and automation solutions foster vibrant communities on another key platform, driving engagement and building loyal followings for your project.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage5,
   },
   {
     id: "5",
     title: "Web3 Social Managment",
-    text: "Wallet Hunter’s Web3 Social Media services are designed to enhance your brand's online presence, influence, and character. From devising strategic plans to implementing them, our team will breathe life into your brand or product across social media platforms. We develop a dynamic social media strategy that sustains itself, ensuring continuous growth and engagement for your brand.",
+    text: "Enhance your brand's online presence, influence, and character with Wallet Hunter’s Web3 Social Media services. From devising strategic plans to their implementation, our dynamic social media strategy ensures continuous growth and engagement.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon2,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage6,
   },
   {
     id: "6",
@@ -277,7 +298,7 @@ export const benefits = [
     text: "Connect directly with your audience through AMA (Ask Me Anything) sessions. As a valuable tool for building trust and transparency, AMAs are a cornerstone of our engagement strategy, giving your project a relatable and accessible voice.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon2,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage7,
   },
   {
     id: "7",
@@ -285,7 +306,7 @@ export const benefits = [
     text: "The shift from Web 2.0 to Web 3.0 is monumental. Our team guides you through this transition, ensuring your project leverages the full potential of decentralized technologies and methodologies.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon2,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage8,
   },
   {
     id: "8",
@@ -293,7 +314,7 @@ export const benefits = [
     text: "Expand your network and capabilities through strategic quests and partnerships. We facilitate connections with other projects and platforms, opening doors to new opportunities and synergies.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon2,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage9,
   },
 ];
 
@@ -322,10 +343,5 @@ export const socials = [
     iconUrl: telegram,
     url: "#",
   },
-  {
-    id: "4",
-    title: "Facebook",
-    iconUrl: facebook,
-    url: "#",
-  },
+
 ];

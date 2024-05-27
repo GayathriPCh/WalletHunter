@@ -1,0 +1,10 @@
+.fade-section {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    will-change: opacity; /* Improves performance for smooth scrolling */
+  }
+  
+  .fade-section.is-visible {
+    opacity: 1;
+  }
+  

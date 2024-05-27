@@ -1,81 +1,49 @@
-import { brainwaveSymbol, check } from "../assets";
-import { collabApps, collabContent, collabText } from "../constants";
-import Button from "./Button";
-import Section from "./Section";
+import { useState } from 'react'; // Import useState hook
 import { LeftCurve, RightCurve } from "./design/Collaboration";
+import Section from "./Section";
 
 const Collaboration = () => {
+  const [isFlipped, setIsFlipped] = useState(false); // State to track flip card status
+
   return (
-    <Section crosses>
+    <Section id="4" crosses>
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
           <h2 className="h2 mb-4 md:mb-8">
             About us
           </h2>
 
-          <ul className="max-w-[22rem] mb-10 md:mb-14">
-            {collabContent.map((item) => (
-              <li className="mb-3 py-3" key={item.id}>
-                <div className="flex items-center">
-                  <img src={check} width={24} height={24} alt="check" />
-                  <h6 className="body-2 ml-5">{item.title}</h6>
-                </div>
-                {item.text && (
-                  <p className="body-2 mt-3 text-n-4">{item.text}</p>
-                )}
-              </li>
-            ))}
-          </ul>
-
-        </div>
-
-        <div className="lg:ml-auto xl:w-[38rem] mt-4">
-          <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
-            {collabText}
-          </p>
-
-          <div className="relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100">
-            <div className="flex w-60 aspect-square m-auto border border-n-6 rounded-full">
-              <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
-                <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
-                  <img
-                    src={brainwaveSymbol}
-                    width={48}
-                    height={48}
-                    alt="Wallet Hunter"
-                  />
+          {/* Flip card container */}
+          <div className={`card ${isFlipped ? 'is-flipped' : ''}`} onClick={() => setIsFlipped(!isFlipped)}>
+            <div className="card__side card__side--front">
+              <div className="card__theme">
+                <div className="card__theme-box">
+                  <h3 className="card__subject">Front Side Title</h3>
+                  <h2 className="card__title">Front Side Title</h2>
                 </div>
               </div>
             </div>
-
-            <ul>
-              {collabApps.map((app, index) => (
-                <li
-                  key={app.id}
-                  className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom rotate-${
-                    index * 45
-                  }`}
-                >
-                  <div
-                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
-                      index * 45
-                    }`}
-                  >
-                    <img
-                      className={`m-auto ${app.id !== 'brainwave' ? 'rounded-full' : ''}`}
-                      width={app.width}
-                      height={app.height}
-                      alt={app.title}
-                      src={app.icon}
-                    />
-                  </div>
-                </li>
-              ))}
-            </ul>
-
-            <LeftCurve />
-            <RightCurve />
+            <div className="card__side card__side--back">
+              <div className="card__cover">
+                <h4 className="card__heading">
+                  <span className="card__heading-span">Back Side Text</span>
+                </h4>
+              </div>
+              <div className="card__details">
+                <ul>
+                  <li>Detail 1</li>
+                  <li>Detail 2</li>
+                  {/* Add more details as needed */}
+                </ul>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <div className="lg:ml-auto xl:w-[38rem] mt-4">
+          {/* Add other content */}
+          <LeftCurve />
+          <RightCurve />
         </div>
       </div>
     </Section>
