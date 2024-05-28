@@ -8,16 +8,18 @@ import twitterIcon from '../assets/socials/twitter.svg';
 // Styled components
 const TeamSection = styled.section`
   text-align: center;
-  padding: 50px 0; /* Added padding for space on the page */
+  padding: 100px 0; /* Added more padding for space on the page */
 `;
 
 const TeamHeadText = styled.h1`
-  font-size: 36px; /* Bigger font size */
+  font-size: 80px; /* Bigger font size */
   font-weight: bold;
   background: linear-gradient(90deg, #8e2de2, #4a00e0); /* Black purple gradient */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 40px; /* More space after the title */
+  padding: 10px 0; /* Added padding to prevent clipping */
+  line-height: 1.2; /* Adjusted line height */
 `;
 
 const CardContainer = styled.div`
@@ -36,7 +38,30 @@ const Card = styled.div`
   padding: 40px; /* Increased padding */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  color: white; /* White text */
+  transform: rotate(-3deg); /* Tilt the card */
+  transition: transform 0.3s ease; /* Add transition effect */
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: rotate(0deg); /* Reset tilt on hover */
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: linear-gradient(45deg, #77FFD2, #6297DB);
+    z-index: 1;
+  }
+
+  > * {
+    position: relative;
+    z-index: 2;
+  }
 `;
 
 const TeamImageWrapper = styled.div`
@@ -67,13 +92,13 @@ const Name = styled.p`
 
 const Position = styled.p`
   font-size: 20px; /* Adjusted font size */
-  color: white;
+  color: black; /* Changed color to black */
   margin-bottom: 15px;
 `;
 
 const FeatureText = styled.p`
   font-size: 18px; /* Adjusted font size */
-  color: white;
+  color: black; /* Changed color to black */
   margin-bottom: 20px; /* Increased margin */
 `;
 
