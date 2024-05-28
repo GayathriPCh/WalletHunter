@@ -16,72 +16,106 @@ const CustomCursor = () => {
       cursor.style.top = `${y}px`;
       smallCircle.style.left = `${x}px`;
       smallCircle.style.top = `${y}px`;
-      // Position the blend circle slightly behind the small circle
-      blendCircle.style.left = `${x - 10}px`; // Adjust this value as needed for the trailing effect
-      blendCircle.style.top = `${y - 10}px`; // Adjust this value as needed for the trailing effect
+      blendCircle.style.left = `${x - 10}px`;
+      blendCircle.style.top = `${y - 10}px`;
     };
 
     const handleHover = (e) => {
       const target = e.target;
       if (target.tagName.toLowerCase() === "a" || target.tagName.toLowerCase() === "button") {
-        cursor.style.opacity = "0.7"; // Make cursor slightly transparent
-        smallCircle.style.opacity = "0.7"; // Make small circle slightly transparent
-        blendCircle.style.opacity = "0.7"; // Make blend circle slightly transparent
+        cursor.style.opacity = "0.7";
+        smallCircle.style.opacity = "0.7";
+        blendCircle.style.opacity = "0.7";
+        // Apply magnifying effect
+        cursor.style.width = "120px";
+        cursor.style.height = "120px";
+        smallCircle.style.width = "12px";
+        smallCircle.style.height = "12px";
+        blendCircle.style.width = "24px";
+        blendCircle.style.height = "24px";
       } else {
-        cursor.style.opacity = "1"; // Restore opacity if not hovering over a link or button
-        smallCircle.style.opacity = "1"; // Restore opacity for small circle
-        blendCircle.style.opacity = "1"; // Restore opacity for blend circle
+        cursor.style.opacity = "1";
+        smallCircle.style.opacity = "1";
+        blendCircle.style.opacity = "1";
+        // Revert back to normal size
+        cursor.style.width = "80px";
+        cursor.style.height = "80px";
+        smallCircle.style.width = "10px";
+        smallCircle.style.height = "10px";
+        blendCircle.style.width = "20px";
+        blendCircle.style.height = "20px";
       }
+    };
+
+    const handleClick = () => {
+      cursor.style.width = "60px"; // Adjust this value to change the size of the cursor on click
+      cursor.style.height = "60px";
+      smallCircle.style.width = "8px"; // Adjust this value to change the size of the small circle on click
+      smallCircle.style.height = "8px";
+      blendCircle.style.width = "16px"; // Adjust this value to change the size of the blend circle on click
+      blendCircle.style.height = "16px";
+
+      // Reset the cursor size after a short delay
+      setTimeout(() => {
+        cursor.style.width = "80px";
+        cursor.style.height = "80px";
+        smallCircle.style.width = "10px";
+        smallCircle.style.height = "10px";
+        blendCircle.style.width = "20px";
+        blendCircle.style.height = "20px";
+      }, 200); // Adjust this value to change the duration of the size change
     };
 
     document.addEventListener("mousemove", moveCursor);
     document.addEventListener("mouseover", handleHover);
+    document.addEventListener("click", handleClick);
 
-    document.body.style.cursor = "none"; // Hide the default cursor
+    document.body.style.cursor = "none";
 
     return () => {
       document.removeEventListener("mousemove", moveCursor);
       document.removeEventListener("mouseover", handleHover);
-      document.body.style.cursor = ""; // Reset the cursor on cleanup
+      document.removeEventListener("click", handleClick);
+      document.body.style.cursor = "";
     };
   }, []);
 
   const cursorStyle = {
     position: "fixed",
-    width: "80px", // Size of the cursor
-    height: "80px", // Size of the cursor
+    width: "80px",
+    height: "80px",
     borderRadius: "50%",
-    backgroundColor: "rgba(112, 7, 240, 0.8)", // Purple background with transparency
-    mixBlendMode: "difference", // Make text visible through the cursor
+    backgroundColor: "rgba(112, 7, 240, 0.8)",
+    mixBlendMode: "difference",
     pointerEvents: "none",
     transform: "translate(-50%, -50%)",
     zIndex: 1000,
-    transition: "opacity 0.2s ease, transform 0.2s ease",
+    transition: "opacity 0.2s ease, transform 0.2s ease, width 0.2s ease, height 0.2s ease", // Include width and height in the transition
   };
 
   const smallCircleStyle = {
     position: "fixed",
-    width: "10px", // Size of the small circle
-    height: "10px", // Size of the small circle
+    width: "10px",
+    height: "10px",
     borderRadius: "50%",
-    backgroundColor: "white", // White background
+    backgroundColor: "white",
     pointerEvents: "none",
     transform: "translate(-50%, -50%)",
-    zIndex: 1001, // Slightly higher z-index than the blend mode circle
-    transition: "opacity 0.2s ease, transform 0.2s ease",
+    zIndex: 1001,
+    transition: "opacity 0.2s ease, transform 0.2s ease, width 0.2s ease, height 0.2s ease", // Include width and height in the transition
   };
 
   const blendCircleStyle = {
     position: "fixed",
-    width: "20px", // Size of the blend circle
-    height: "20px", // Size of the blend circle
+    width: "20px",
+    height: "20px",
     borderRadius: "50%",
-    backgroundColor: "rgba(112, 7, 240, 0.8)", // Purple background with transparency
-    mixBlendMode: "difference", // Make text visible through the cursor
+    backgroundColor: "rgba(112, 7, 240, 0.8)",
+    mixBlendMode: "difference",
     pointerEvents: "none",
     transform: "translate(-50%, -50%)",
-    zIndex: 999, // Lower z-index than the small circle
-    transition: "opacity 0.2s ease, transform 0.2s ease",
+    zIndex: 999,
+    transition: "opacity 0.2s ease, transform 0.2s ease, width 0.2s ease, height 0.2s ease", // Include width and height in the transition
   };
 
   return (
