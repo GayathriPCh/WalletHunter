@@ -1,8 +1,32 @@
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
 import { benefits } from "../constants";
 import Heading from "./Heading";
 import Section from "./Section";
 import { GradientLight } from "./design/Benefits";
 import ClipPath from "../assets/svg/ClipPath";
+
+// Keyframes for the shine animation
+const shine = keyframes`
+  0% {
+    background-position: -200px;
+  }
+  100% {
+    background-position: 200px;
+  }
+`;
+
+// Styled component for the title text with the shine effect
+const ShiningTitle = styled.h5`
+  font-size: 1.25rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #21d4fd, #c0c0ff, #b721ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  animation: ${shine} 2s infinite linear;
+`;
 
 const Benefits = () => {
   return (
@@ -25,7 +49,7 @@ const Benefits = () => {
               data-image={item.imageUrl}
             >
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
-                <h5 className="h5 mb-5 text-white">{item.title}</h5>
+                <ShiningTitle className="h5 mb-5">{item.title}</ShiningTitle>
                 <p className="body-2 mb-6 text-n-3 text-white">{item.text}</p>
               </div>
 
