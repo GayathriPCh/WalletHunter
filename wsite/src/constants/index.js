@@ -270,7 +270,7 @@ export const benefits = [
   {
     id: "3",
     title: "Web3.0 SEO",
-    text: "Wallet Hunter’s Web3SEO services brings advancement to your brand awareness. Our team is responsible for creating the strong on-page and off-page seo for your brand and attracting your users from organic presence. We provide full support on both web3 distribution strategy and content implementation across platforms.",
+    text: "Wallet Hunter’s Web3 SEO services boost brand awareness through robust on-page and off-page SEO, attracting organic traffic and offering full support for web3 distribution strategy and content implementation.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon4,
     imageUrl: benefitImage4,
