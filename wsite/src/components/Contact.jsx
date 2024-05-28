@@ -53,8 +53,8 @@ const LoginButton = styled.button`
   display: block;
   width: 100%;
   font-weight: bold;
-  background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
-  color: white;
+  background: linear-gradient(45deg, #21d4fd, #c0c0ff, #b721ff);
+  color: black; /* Set text color to black */
   padding-block: 15px;
   margin: 20px auto;
   border-radius: 20px;
