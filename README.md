@@ -4,7 +4,6 @@ Website
 
  Navigate to the `wsite` directory:
    ```bash
-   cd wsite
    npm install
    npm run dev
    ```
