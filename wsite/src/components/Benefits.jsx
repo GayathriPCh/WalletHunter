@@ -16,7 +16,7 @@ const Benefits = () => {
         <div className="flex flex-wrap justify-between gap-10 mb-10">
           {benefits.map((item) => (
             <div
-              className="benefit-card block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] w-full md:w-auto"
+              className="benefit-card block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] w-full md:w-auto hover:scale-105 transition-transform duration-300"
               style={{
                 backgroundImage: `url(${item.backgroundUrl})`,
                 flex: "1 0 30%", // Set flex-basis to 30% to allow 3 cards per row
@@ -25,8 +25,8 @@ const Benefits = () => {
               data-image={item.imageUrl}
             >
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
-                <h5 className="h5 mb-5">{item.title}</h5>
-                <p className="body-2 mb-6 text-n-3">{item.text}</p>
+                <h5 className="h5 mb-5 text-white">{item.title}</h5>
+                <p className="body-2 mb-6 text-n-3 text-white">{item.text}</p>
               </div>
 
               {item.light && <GradientLight />}
