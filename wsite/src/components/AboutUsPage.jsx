@@ -19,6 +19,16 @@ const zoom = keyframes`
   }
 `;
 
+// Define the keyframes for the shining effect
+const shine = keyframes`
+  0% {
+    background-position: -200px;
+  }
+  100% {
+    background-position: 200px;
+  }
+`;
+
 // Styled components for the about us container and its children
 const AboutUsContainer = styled.div`
   display: flex;
@@ -51,10 +61,19 @@ const Back = styled.div`
   transform: rotateY(180deg);
 `;
 
+// Updated Title styled component with shining animation
 const Title = styled.h1`
   font-size: 3rem;
   margin-bottom: 20px;
-  color: white;
+  background: linear-gradient(45deg, purple, black);
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 1.2; /* Adjust the line height as needed */
+  display: inline-block; /* Ensures proper rendering */
+  animation: ${shine} 2s linear infinite; /* Shining animation */
+  background-size: 200px;
+  background-clip: text;
+  text-fill-color: transparent;
 `;
 
 const Description = styled.p`
