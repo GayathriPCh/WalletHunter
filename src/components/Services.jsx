@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Section from "./Section";
 import Heading from "./Heading";
 import styled, { keyframes } from 'styled-components';
@@ -27,24 +27,17 @@ const ShiningButton = styled.a`
 `;
 
 const Services = () => {
-  const [hovered, setHovered] = useState(false);
 
   return (
     <Section id="how-to-use">
       <div className="container">
         <Heading title="Our Products" />
         <div className="card-wrapper">
-          <div
-            className={`product-card ${hovered ? 'hovered' : ''}`}
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-          >
-            <p className="title">Telegram <br /> <br />Trends<br /><br /> Analyzer</p>
-            {hovered && (
-              <ShiningButton href="https://telegramtrends.xyz" className="visit-btn">
-                Visit Website
-              </ShiningButton>
-            )}
+          <div className="product-card">
+            <a href="https://telegramtrends.xyz" className="title" target="_blank" rel="noopener noreferrer">
+              Telegram Trends
+            </a>
+            <span className="description">Real-time analysis of trends on Telegram</span>
           </div>
         </div>
       </div>
@@ -61,26 +54,24 @@ const Services = () => {
         }
 
         .product-card {
-          position: relative;
-          width: 480px;
-          height: 380px;
-          border: none;
+          width: 480px; /* Adjusted width */
+          height: 180px; /* Adjusted height */
           border-radius: 20px;
           overflow: hidden;
           cursor: pointer;
-          background: #fff;
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); 
           transition: box-shadow 0.3s ease-in-out; /* Smooth transition for box-shadow */
+          margin: 20px; /* Added margin */
+          display: flex;
+          justify-content: space-between;
+          align-items: center; /* Center content vertically */
+          padding: 20px;
+          background: none; /* Removed white box background */
         }
 
         .title {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          font-size: 32px;
+          font-size: 24px; /* Adjusted font size */
           font-weight: bold;
-          text-align: center;
           color: transparent;
           background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
           -webkit-background-clip: text;
@@ -88,12 +79,16 @@ const Services = () => {
           transition: color 0.3s ease-in-out; /* Smooth transition for text color */
         }
 
-        .product-card.hovered {
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0); /* Change box-shadow when hovered */
+        .description {
+          font-size: 14px;
+          color: #fff; /* Changed text color to white */
+          margin-left: 20px; /* Adjusted margin for positioning */
         }
 
-        .product-card.hovered .title {
-          color: #fff; /* Change text color when hovered */
+      
+
+        .product-card:hover .title {
+          color: #6a0691; /* Change text color when hovered */
         }
       `}</style>
     </Section>

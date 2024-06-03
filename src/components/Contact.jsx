@@ -142,7 +142,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.send('service_wh5ky7o', 'template_i2c8fdj', formData, 'Oq_lELu5YPoBkdOml')
+    emailjs.send('your-service-id', 'your-template-id', formData, 'your-public-api-key')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         alert('Email sent successfully');

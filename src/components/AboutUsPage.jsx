@@ -19,8 +19,8 @@ const zoom = keyframes`
   }
 `;
 
-// Define the keyframes for the shining effect
-const shine = keyframes`
+// Define the keyframes for the shining effect (light purple-blue)
+const shineLightPurpleBlue = keyframes`
   0% {
     background-position: -200px;
   }
@@ -36,41 +36,24 @@ const AboutUsContainer = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  max-width: 800px; /* Increased max-width */
+  max-width: 800px;
   padding: 50px;
-  background: linear-gradient(135deg, #5EFCE8, #736EFE); /* Updated gradient */
-  border-radius: 10px;
   text-align: center;
-  margin: 0 auto; /* Center horizontally */
-  height: 80vh; /* Decreased height */
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-  &:hover {
-    transform: rotateY(180deg);
-  }
+  margin: 0 auto;
+  height: 80vh;
 `;
 
-const Front = styled.div`
-  position: absolute;
-  backface-visibility: hidden;
-`;
-
-const Back = styled.div`
-  position: absolute;
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
-`;
-
-// Updated Title styled component with shining animation
+// Updated Title styled component with shining animation and new colors
 const Title = styled.h1`
   font-size: 3rem;
   margin-bottom: 20px;
-  background: linear-gradient(45deg, purple, black);
+  background-image: linear-gradient(45deg, #b6a5ff, #87f7ff, #b6a5ff);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
-  line-height: 1.2; /* Adjust the line height as needed */
-  display: inline-block; /* Ensures proper rendering */
-  animation: ${shine} 2s linear infinite; /* Shining animation */
+  line-height: 1.2;
+  display: inline-block;
+  animation: ${shineLightPurpleBlue} 2s infinite linear;
   background-size: 200px;
   background-clip: text;
   text-fill-color: transparent;
@@ -106,55 +89,25 @@ const Star = styled.div`
   opacity: 0;
 `;
 
-// Styled component for the list container
-const ListContainer = styled.div`
-  padding: 40px; /* Adjust padding as needed */
-`;
-
-// Styled component for the list
-const List = styled.ul`
-  text-align: left;
-  list-style-type: disc;
-`;
-
-const ListItem = styled.li`
-  font-size: 1.4rem;
-  color: white;
-`;
-
 const AboutUsPage = () => {
   return (
     <section id="4">
       <AboutUsContainer>
-        <Front>
-          <Space>
-            {/* Stars */}
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-          </Space>
-          <Title>About Us</Title>
-          <br></br>
-          <br></br>
-          {/* About Us Description */}
-          <Description>
-          Unlock Web3 success with Wallet Hunter – where innovation meets strategy. Crafted personas, tailored marketing, and trusted transitions. Join brands choosing tailored, data-driven triumph.          </Description>
-        </Front>
-        <Back>
-          {/* Back Content Goes Here */}
-          <Title>What we do</Title>
-          <ListContainer>
-            <List>
-              <ListItem id="0">Expertise at the intersection of innovation and comprehension</ListItem><br></br>
-              <ListItem id="1">Artisanal approach to sculpting unique identities for wallet addresses</ListItem><br></br>
-              <ListItem id="2">Personalizing personas with tags like “DEX Trader” and “Gaming NFT Whale”</ListItem><br></br>
-              <ListItem id="3">Empowering Web3 projects to find like-minded enthusiasts</ListItem><br></br>
-              <ListItem id="4">Every wallet becomes a beacon of identity and purpose</ListItem>
-            </List>
-          </ListContainer>
-        </Back>
+        <Space>
+          {/* Stars */}
+          <Star />
+          <Star />
+          <Star />
+          <Star />
+          <Star />
+        </Space>
+        <Title>About Us</Title>
+        <br></br>
+        <br></br>
+        {/* About Us Description */}
+        <Description>
+          Unlock Web3 success with Wallet Hunter – where innovation meets strategy. Crafted personas, tailored marketing, and trusted transitions. Join brands choosing tailored, data-driven triumph.
+        </Description>
       </AboutUsContainer>
     </section>
   );

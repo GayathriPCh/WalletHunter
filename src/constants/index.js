@@ -45,6 +45,9 @@ import {
   brand2,
   brand3,
   brand4,
+  brand5,
+  brand6,
+  brand7,
 } from "../assets";
 
 export const navigation = [
@@ -81,7 +84,16 @@ export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 export const notificationImages = [notification4, notification3, notification2];
 
-export const companyLogos = [brand1, brand2, brand3, brand4];
+export const companyLogos = [
+  { url: "https://ammocrypt.io/", image: brand1 },
+  { url: "https://q.org/", image: brand2 },
+  { url: "https://www.metafide.io/", image: brand3 },
+  { url: "https://0xppl.com/", image: brand4 },
+  { url: "https://www.herd-ventures.com/", image: brand5 },
+  { url: "https://polkadex.trade/", image: brand6 },
+  { url: "https://www.staderlabs.com/", image: brand7 },
+  // Add URLs for other logos
+];
 
 export const brainwaveServices = [
   "Message Sentiments",
@@ -333,15 +345,9 @@ export const socials = [
   },
   {
     id: "2",
-    title: "Github",
+    title: "Gmail",
     iconUrl: instagram,
-    url: "https://github.com/z6o/WalletHunter",
-  },
-  {
-    id: "3",
-    title: "Telegram",
-    iconUrl: telegram,
-    url: "#",
+    url: "mailto:wagmi@wallethunter.xyz",
   },
 
 ];

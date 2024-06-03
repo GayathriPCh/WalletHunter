@@ -12,7 +12,9 @@ import brand1 from "./ammocrypt.png";
 import brand2 from "./Q.png";
 import brand3 from "./metafield.png";
 import brand4 from "./oxppl.png";
-
+import brand5 from "./herdventures.png";
+import brand6 from "./polkadex.png";
+import brand7 from "./stader.png";
 import homeSmile from "./home-smile.svg";
 import file02 from "./file-02.svg";
 import searchMd from "./search-md.svg";
@@ -102,6 +104,9 @@ export {
   brand2, 
   brand3,
   brand4,
+  brand5,
+  brand6,
+  brand7,
   homeSmile,
   file02,
   searchMd,

@@ -5,13 +5,14 @@ import Benefits from "./components/Benefits";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Pricing from "./components/Pricing";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
 import CustomCursor from "./components/CustomCursor";
 import FadeInSection from "./components/FadeInSection";
 import AboutUsPage from "./components/AboutUsPage";
 import TeamIntro from './components/TeamIntro';
+import FAQPage from './components/FAQPage'; // Import the FAQPage component
+
 const App = () => {
   return (
     <>
@@ -21,7 +22,7 @@ const App = () => {
         <FadeInSection><Benefits /></FadeInSection>
         <FadeInSection><AboutUsPage /></FadeInSection>
         <FadeInSection><Services /></FadeInSection>
-        <FadeInSection><Pricing /></FadeInSection>
+        <FadeInSection><FAQPage /></FadeInSection> {/* Add FAQPage component */}
         <FadeInSection><TeamIntro /></FadeInSection>
         <FadeInSection><Contact /></FadeInSection>
         <Footer />

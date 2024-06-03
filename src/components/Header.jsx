@@ -1,6 +1,5 @@
 import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-
 import { brainwave } from "../assets";
 import { navigation } from "../constants";
 import Button from "./Button";
@@ -69,16 +68,17 @@ const Header = () => {
 
        
         <a className="hidden lg:flex" href="https://calendly.com/wallet-hunter/30min?month=2024-05">
-  <Button>
-    Schedule a meeting
-  </Button>
-</a>
+          <Button>
+            Schedule a meeting
+          </Button>
+        </a>
 
 
         <Button
-          className="ml-auto lg:hidden"
+          className={`ml-auto lg:hidden ${openNavigation ? "no-cursor" : ""}`}
           px="px-3"
           onClick={toggleNavigation}
+          style={{ cursor: "default" }} // Set cursor to default for the button
         >
           <MenuSvg openNavigation={openNavigation} />
         </Button>
