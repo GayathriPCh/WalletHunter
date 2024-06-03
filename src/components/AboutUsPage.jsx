@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import { Helmet } from 'react-helmet';
 
 // Define the keyframes for the zoom animation
 const zoom = keyframes`
@@ -92,6 +93,9 @@ const Star = styled.div`
 const AboutUsPage = () => {
   return (
     <section id="4">
+      <Helmet>
+        <link href="https://fonts.googleapis.com/css?family=Exo 2" rel="stylesheet" />
+      </Helmet>
       <AboutUsContainer>
         <Space>
           {/* Stars */}
